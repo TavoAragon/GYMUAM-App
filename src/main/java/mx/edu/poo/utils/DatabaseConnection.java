@@ -8,7 +8,7 @@ public class DatabaseConnection {
     // Ajusta la URL si tu BD se llama GYMUAM (verifica)
     private static final String URL = "jdbc:mysql://localhost:3306/GYMUAM?useSSL=false&serverTimezone=UTC";
     private static final String USER = "aragondb";
-    private static final String PASSWORD = "LTSI";
+    private static final String PASSWORD = "";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
