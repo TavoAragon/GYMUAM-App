@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMUAM · Asistencias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">🏋️ GYMUAM</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="activities.html">Actividades</a>
+    <a href="inventory.html">Inventario</a>
+    <a href="prestamos.html">Préstamos</a>
+    <a href="registro.html">Asistencias</a>
+</nav>
+<div class="container">
+    <h1>Registro de Asistencias</h1>
+
+    <div class="form-container">
+        <h2>Registrar Asistencia</h2>
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="alumnoRegSelect">Alumno:</label>
+                <select id="alumnoRegSelect" required>
+                    <option value="">Seleccione un alumno</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="actividadRegSelect">Actividad:</label>
+                <select id="actividadRegSelect" required>
+                    <option value="">Seleccione una actividad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <!-- Filtros -->
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+        <label>Ver por alumno: </label>
+        <label for="alumnoFiltro"></label><select id="alumnoFiltro">
+            <option value="">-- Todos --</option>
+        </select>
+        <label>Fecha: </label>
+        <label for="fechaFiltro"></label><input type="date" id="fechaFiltro">
+        <button id="filtrarBtn" class="secondary">Filtrar</button>
+    </div>
+
+    <h2>Historial de Asistencias</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Alumno</th>
+            <th>Actividad</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="registrosTable"></tbody>
+    </table>
+</div>
+<script src="js/registro.js"></script>
+</body>
+</html>

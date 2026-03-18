@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMUAM · Inventario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">🏋️ GYMUAM</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="activities.html">Actividades</a>
+    <a href="inventory.html">Inventario</a>
+    <a href="prestamos.html">Préstamos</a>
+    <a href="registro.html">Asistencias</a>
+</nav>
+<div class="container">
+    <h1>Inventario de Juegos</h1>
+    <div class="form-container">
+        <h2 id="formTitle">Agregar Juego</h2>
+        <form id="juegoForm">
+            <input type="hidden" id="juegoId">
+            <div class="form-group">
+                <label for="nombreJuego">Nombre del juego:</label>
+                <input type="text" id="nombreJuego" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" min="0" required>
+            </div>
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancelEdit" class="secondary hidden">Cancelar</button>
+        </form>
+    </div>
+    <h2>Listado de Juegos</h2>
+    <table>
+        <thead><tr><th>ID</th><th>Nombre</th><th>Cantidad</th><th>Acciones</th></tr></thead>
+        <tbody id="inventarioTable"></tbody>
+    </table>
+</div>
+<script src="js/inventory.js"></script>
+</body>
+</html>

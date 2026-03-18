@@ -67,4 +67,14 @@ public class PrestamoController {
     public List<Prestamo> obtenerActivos() {
         return prestamoRepository.findByFechaDevolucionIsNull();
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarPrestamo(@PathVariable Integer id) {
+        return prestamoRepository.findById(id)
+                .map(prestamo -> {
+                    prestamoRepository.delete(prestamo);
+                    return ResponseEntity.ok().<Void>build();
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
 }

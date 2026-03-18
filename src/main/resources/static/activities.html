@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMUAM · Actividades</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">🏋️ GYMUAM</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="activities.html">Actividades</a>
+    <a href="inventory.html">Inventario</a>
+    <a href="prestamos.html">Préstamos</a>
+    <a href="registro.html">Asistencias</a>
+</nav>
+<div class="container">
+    <h1>Gestión de Actividades</h1>
+    <div class="form-container">
+        <h2 id="formTitle">Registrar Nueva Actividad</h2>
+        <form id="actividadForm">
+            <input type="hidden" id="actividadId">
+            <div class="form-group">
+                <label for="nombreActividad">Nombre de la Actividad:</label>
+                <input type="text" id="nombreActividad" required>
+            </div>
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancelEdit" class="secondary hidden">Cancelar</button>
+        </form>
+    </div>
+    <h2>Lista de Actividades</h2>
+    <table>
+        <thead><tr><th>ID</th><th>Nombre</th><th>Acciones</th></tr></thead>
+        <tbody id="actividadesTable"></tbody>
+    </table>
+</div>
+<script src="js/activities.js"></script>
+</body>
+</html>

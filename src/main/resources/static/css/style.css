@@ -1,0 +1,223 @@
+:root {
+    --primary: #ff6a00;
+    --primary-light: #ff8c1a;
+    --primary-dark: #cc5200;
+    --secondary: #ffb347;
+    --dark: #111;
+    --dark-card: #1c1c1c;
+    --light: #f5f5f5;
+    --white: #fff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #111, #1c1c1c);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    border-bottom: 3px solid var(--secondary);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    border-bottom-color: var(--secondary);
+}
+
+nav a:first-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-right: auto;
+    letter-spacing: 1px;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--dark-card);
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: var(--white);
+    border-top: 4px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(255,106,0,0.4);
+}
+
+.card h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Forms */
+.form-container {
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+}
+
+button.secondary {
+    background: #555;
+}
+
+button.secondary:hover {
+    background: #777;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    background: var(--dark-card);
+    border-collapse: collapse;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+}
+
+.action-btn:hover {
+    color: var(--primary-light);
+    background: none;
+}
+
+.delete-btn {
+    color: #ff4d4d;
+}
+
+.delete-btn:hover {
+    color: #ff1a1a;
+}
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+```

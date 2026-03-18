@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMUAM · Préstamos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">🏋️ GYMUAM</a>
+    <a href="alumnos.html">Alumnos</a>
+    <a href="activities.html">Actividades</a>
+    <a href="inventory.html">Inventario</a>
+    <a href="prestamos.html">Préstamos</a>
+    <a href="registro.html">Asistencias</a>
+</nav>
+<div class="container">
+    <h1>Préstamos de Juegos</h1>
+
+    <!-- Formulario nuevo préstamo -->
+    <div class="form-container">
+        <h2>Registrar Préstamo</h2>
+        <form id="prestamoForm">
+            <div class="form-group">
+                <label for="alumnoSelect">Alumno:</label>
+                <select id="alumnoSelect" required>
+                    <option value="">Seleccione un alumno</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="juegoSelect">Juego:</label>
+                <select id="juegoSelect" required>
+                    <option value="">Seleccione un juego</option>
+                </select>
+            </div>
+            <button type="submit">Registrar Préstamo</button>
+        </form>
+    </div>
+
+    <!-- Filtros -->
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+        <button id="filterAll" class="secondary">Todos</button>
+        <button id="filterActive" class="secondary">Préstamos Activos</button>
+        <span> | </span>
+        <label>Ver por alumno: </label>
+        <label for="alumnoFilter"></label><select id="alumnoFilter">
+            <option value="">-- Todos --</option>
+        </select>
+    </div>
+
+    <!-- Tabla de préstamos -->
+    <h2>Listado de Préstamos</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Alumno</th>
+            <th>Juego</th>
+            <th>Fecha Préstamo</th>
+            <th>Fecha Devolución</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="prestamosTable"></tbody>
+    </table>
+</div>
+<script src="js/prestamos.js"></script>
+</body>
+</html>

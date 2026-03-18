@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GYMUAMApplication {
     public static void main(String[] args) {
         SpringApplication.run(GYMUAMApplication.class, args);
-        System.out.println("🚀 GYMUAM API iniciada en http://localhost:8080");
+        System.out.println(" GYMUAM API iniciada en http://localhost:8080");
     }
 }

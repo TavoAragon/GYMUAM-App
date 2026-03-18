@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS GYMUAM;
 USE GYMUAM;
 
 -- Crear usuario (si no existe) con acceso desde cualquier host
-CREATE USER IF NOT EXISTS 'aragondb'@'%' IDENTIFIED BY '';
+CREATE USER IF NOT EXISTS 'aragondb'@'%' IDENTIFIED BY 'LTSI';
 
 -- Otorgar privilegios
 GRANT ALL PRIVILEGES ON GYMUAM.* TO 'aragondb'@'%';
